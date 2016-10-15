@@ -644,10 +644,10 @@ function updateexploitdb {
 	clear
 	echo -e "\033[31mThis script will update your Exploitdb\033[m"
 	cd /usr/share/exploitdb
-	rm -rf archive.tar.bz2
-	wget http://www.exploit-db.com/archive.tar.bz2
-	tar xvfj archive.tar.bz2
-	rm -rf archive.tar.bz2
+	rm -rf master.zip
+	wget https://github.com/offensive-security/exploit-database/archive/master.zip
+	unzip master.zip
+	rm -rf master.zip
 	echo -e "\e[32m[-] Done Updating Exploitdb!\e[0m"	
 }
 
